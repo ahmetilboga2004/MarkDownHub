@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MarkDownHub</title>
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
+    <!-- MDB -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.2/mdb.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+<body>
+    <header>
+        <nav class="navbar fixed-top navbar-expand-lg" id="navbar">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <img src="markdown_logo.png" class="me-2" height="40" alt="MarkDownHub" loading="lazy" />
+                    <small>MarkDownHub</small>
+                </a>
+
+                <button class="navbar-toggler" type="button" data-mdb-toggle="collapse"
+                    data-mdb-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <i class="fas fa-bars"></i>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Editör</a>
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- Jumbotron -->
+    <div class="p-5 text-center" style="margin-top: 58px;" id="jumbotron">
+        <h1 id="ders-baslik" class="mb-3">Heading</h1>
+    </div>
+    <!-- Jumbotron -->
+
+    <main>
+        <div class="container-sm fs-5 text-dark text-break lh-base font-monospace" id="content">
+
+        </div>
+    </main>
+    <footer class="fixed-bottom">
+        <div class="d-flex justify-content-between align-items-stretch m-2">
+            <div>
+                <button id="oncekiDersButton" class="btn btn-lg btn-dark btn-rounded">
+                    <i class="fas fa-caret-left"></i> Önceki</button>
+            </div>
+
+            <div>
+                <button id="sonrakiDersButton" class="btn btn-lg btn-dark btn-rounded">Sonraki 
+                    <i class="fas fa-caret-right"></i></button>
+            </div>
+
+        </div>
+    </footer>
+    <!-- MDB -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.2/mdb.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
