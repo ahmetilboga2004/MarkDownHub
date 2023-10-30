@@ -1,0 +1,55 @@
+{% extends "base.html" %} {% block title %}Editör{% endblock title %} {% block
+content %}
+<!-- Jumbotron -->
+<div class="p-5 text-center" style="margin-top: 58px" id="jumbotron">
+  <h1 id="editor-jumbotron" class="mb-3 text-uppercase display-5">Editör</h1>
+</div>
+<!-- Jumbotron -->
+
+<div class="container-fluid shadow bg-body-secondary mt-4 p-4 rounded" id="editor-div">
+  <div class="row align-items-start">
+    <div class="col-md mt-2">
+      <div class="p-2 bd-highlight">
+        <label for="editor-markdown" class="form-label p-3 rounded bg-primary bg-gradient shadow"
+          >Markdown</label
+        >
+        <textarea
+          placeholder="Markdown kodlarınızı buraya yazabilirsiniz"
+          class="form-control rounded shadow"
+          id="editor-markdown"
+        ></textarea>
+      </div>
+    </div>
+    <div class="col-md mt-2">
+      <div class="p-2 bd-highlight">
+        <label for="editor-html" class="form-label p-3 rounded bg-warning bg-gradient shadow"
+          >Html</label
+        >
+        <textarea
+          class="form-control rounded shadow"
+          id="editor-html"
+          readonly
+        ></textarea>
+      </div>
+    </div>
+    <div class="col-md mt-2">
+      <div class="p-2 bd-highlight">
+        <label for="editor-preview" class="form-label p-3 rounded bg-success bg-gradient shadow"
+          >Çıktı</label
+        >
+        <div
+          id="editor-preview"
+          class="border border-success p-2 mb-2 rounded shadow"
+          style="--bs-border-opacity: 0.5"
+        >
+          <!-- Buraya önizleme içeriği eklenebilir -->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock content %}
+{% block scriptFiles %}
+<script src="/static/editor.js"></script>
+{% endblock scriptFiles %}
+

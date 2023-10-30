@@ -1,0 +1,95 @@
+{% extends "base.html" %} 
+{% block title %}Anasayfa{% endblock title %} 
+{% block content %}
+<!-- Jumbotron -->
+<div class="p-5 text-center" style="margin-top: 58px" id="jumbotron">
+  <h1 id="ders-baslik" class="mb-3 text-uppercase display-5">Ders Başlığı</h1>
+</div>
+<!-- Jumbotron -->
+
+<main>
+  <div class="container-sm fs-5 text-dark text-break lh-base" id="content">
+    <div id="ders-icerik">
+    </div>
+    <div id="edit-questions" style="background-color: #B2DFDB" class="rounded p-3" class="mt-5">
+        <div class="row align-item-start" id="ask-text">
+          <div class="col-md p-3">
+            <p class="text-black" id="ask-text-p"></p>
+          </div>
+        </div>
+        <div class="row align-items-start mt-4">
+          <div class="col-md">
+            <div class="p-2 bd-highlight">
+              <label for="markdown-area" class="form-label p-3 rounded bg-light">Markdown</label>
+              <textarea class="form-control rounded" name="markdown-area" id="markdown-area"></textarea>
+            </div>
+          </div>
+          <div class="col-md">
+            <div class="p-2 bd-highlight">
+              <label for="html-area" class="form-label p-3 rounded bg-light">Html</label>
+              <textarea class="form-control rounded" id="html-area" readonly></textarea>
+            </div>
+          </div>
+          <div class="col-md">
+            <div class="p-2 bd-highlight">
+              <label for="preview-area" class="form-label p-3 rounded bg-light">Çıktı</label>
+              <div id="preview-area" class="border border-white p-2 mb-2 rounded" style="--bs-border-opacity: .5;">
+                <!-- Buraya önizleme içeriği eklenebilir -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="d-flex flex-row mb-3">
+        <div class="p-2">
+          <button type="button" id="control-answer" class="btn btn-success">Gönder</button>
+        </div>
+        <div class="p-2">
+        <button type="button" id="reset-answer" class="btn btn-warning">Sıfırla</button>
+        </div>
+        <div class="p-2">
+        <button type="button" id="show-answer" class="btn btn-secondary">Kopya Çek</button>
+        </div>
+      </div>
+      </div>
+  </div>
+</main>
+<footer class="fixed-bottom">
+  <div class="d-flex justify-content-between align-items-stretch m-2">
+    <div>
+      <button id="oncekiDersButton" class="btn btn-lg btn-dark btn-rounded">
+        <i class="fas fa-caret-left"></i> Önceki
+      </button>
+    </div>
+
+    <div>
+      <button id="sonrakiDersButton" class="btn btn-lg btn-dark btn-rounded">
+        Sonraki <i class="fas fa-caret-right"></i>
+      </button>
+    </div>
+  </div>
+</footer>
+
+
+
+
+<div class="modal" tabindex="-1" id="infoModal">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Modal title</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" id="close-modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p>Modal body text goes here.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- MDB -->
+<!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.2/mdb.min.js"></script> -->
+{% endblock content %}
+{% block scriptFiles %}
+<script src="/static/script.js"></script>
+{% endblock scriptFiles %}
