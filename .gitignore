@@ -132,6 +132,7 @@ celerybeat.pid
 .venv
 env/
 venv/
+myvenv/
 ENV/
 env.bak/
 venv.bak/
@@ -289,5 +290,7 @@ pip-selfcheck.json
 # Ignore all local history of files
 .history
 .ionide
+
+migrations
 
 # End of https://www.toptal.com/developers/gitignore/api/python,flask,visualstudiocode,virtualenv
